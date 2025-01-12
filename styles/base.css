@@ -51,40 +51,40 @@ main {
     display: flex;
     width: 99%;
     justify-content: space-between;
-    gap: 20px; /* Espaço entre os elementos */
+    gap: 20px; 
     padding: 10px;
 }
 .card:first-child {
-    flex: 2; /* Ocupa 2/3 da largura disponível */
-    border: 1px solid #ccc; /* Borda sólida fina */
-    border-radius: 20px; /* Cantos arredondados */
+    flex: 2; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
   }
   
   .card:last-child {
-    flex: 1; /* Ocupa 1/3 da largura disponível */
-    border: 1px solid #ccc; /* Borda sólida fina */
-    border-radius: 20px; /* Cantos arredondados */
+    flex: 1; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
   }
   
     .about__me__intern {   
-            display: flex; /* Alinha os elementos lado a lado */
+            display: flex; 
             padding: 20px;
-            flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
-            gap: 20px; /* Espaço entre os elementos */
+            flex-wrap: wrap; 
+            gap: 20px; 
            
     }
 
     .about__me__text {
-        flex: 2; /* Ocupa 2/3 da largura */
-        min-width: 0; /* Permite o ajuste em telas menores */
+        flex: 2; 
+        min-width: 0; 
     }
 
     .about__me__image {
-            max-width: 100%; /* A largura máxima será igual ao contêiner pai */
-            height: auto; /* A altura será ajustada proporcionalmente */
-            display: block; /* Evita espaço extra ao redor da imagem */
-            object-fit: cover; /* Garante que a imagem seja exibida corretamente dentro do contêiner */
-            border: 1px solid #ccc; /* Borda sólida fina */
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            object-fit: cover; 
+            border: 1px solid #ccc; 
             
            
     }
@@ -103,8 +103,8 @@ main {
         display: flex;
         padding: 10px;
     }
-
-    .flag__state__text {
+       
+      .flag__state__text {
         padding-left: 20px;
         padding-right: 7px;
         text-align: justify;
@@ -112,32 +112,33 @@ main {
 
         figure {
             display: flex;
-            flex-direction: column; /* Coloca os elementos em uma coluna */
-            align-items: center; /* Centraliza a imagem e o texto */
-            text-align: center; /* Centraliza o texto no figcaption */
-            margin: 20px 0; /* Espaçamento ao redor do figure */
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            margin: 20px 0; 
         }
     
             figcaption {
-                margin-top: 10px; /* Espaçamento entre a imagem e o texto */
-                font-size: 14px; /* Tamanho da fonte */
-                color: #555; /* Cor do texto */
-            }
+                margin-top: 10px; 
+                font-size: 16px; 
+                color: #555;
+                font-style: italic;
+            }         
 
     .nav__aside {
         display: flex;
         flex-direction: column;
-        gap: 10px; /* Espaço entre os links */
+        gap: 10px; 
     }
     
     .nav__aside a {
         text-decoration: none;
-        color: #007BFF; /* Cor dos links */
+        color: #007BFF; 
         transition: color 0.3s ease;
     }
 
     .nav__aside a:hover {
-        color: #0056b3; /* Cor ao passar o mouse */
+        color: #0056b3; 
     }
 
 
@@ -169,3 +170,7 @@ footer {
     font-size: 20px;
     padding: 5px;
 }
+
+#lastmod {
+    color: yellow;
+  }
