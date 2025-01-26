@@ -1,0 +1,114 @@
+:root {
+    --primary-color: rgb(108, 7, 7);
+    --secondary-color: #eee;
+    --font-family: 'Poppins', sans-serif;
+    --primary-font-size: 20px;
+    --principal-text-align: justify;
+    --background-color: #285f87;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+   
+}
+
+img {
+    max-width: 100%;
+}
+
+
+#header__base {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	height: 150px;
+	text-align: center;
+	position: relative;
+    align-content: center;
+
+}
+
+h1 {
+	text-align: center;
+	font-family: var(--font-family);
+	font-size: 4.0rem;
+	margin-left: 1rem;
+    background-color: var(--primary-color);
+	
+}
+
+h2 {
+    font-size: 3.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 1rem;
+    font-family: var(--font-family);
+}
+
+.landscape__image img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+        
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    text-align: var(--principal-text-align);
+    margin: 1rem;
+}
+
+p strong {
+    display: inline-block;
+    width: 40%; 
+    text-align: right; 
+    margin-right: 5px; 
+}
+
+.weather__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+@media (min-width: 900px) {
+    .contend {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        justify-content: start;
+        background-image: url('../images/hero_large_image_w03.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .landscape__image {
+        z-index: -1;         
+    }
+
+    .data__info {
+        background-color: #eeeeee55;
+        justify-content: left;
+    }
+
+    
+
+
+
+}    
+
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: 15px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
