@@ -78,27 +78,68 @@ p strong {
 
 @media (min-width: 900px) {
     .contend {
-        display: flex;
-        grid-template-columns: 1fr 1fr;
-        justify-content: start;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: left;
+        align-items: center;
         background-image: url('../images/hero_large_image_w03.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .landscape__image {
-        z-index: -1;         
+        z-index: -1;
+        height: 1000px;         
     }
 
-    .data__info {
+    .data__info__column {
+        grid-column: 1;
         background-color: #eeeeee55;
         justify-content: left;
+        place-items: start;
+        margin-left: 20px;
+        padding: 10px;
+        position: absolute;
+        top: 300px;
+        width: 30%;
+    }
+
+    .data__info__column__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0;
+        padding: 0;
+       
     }
 
     
+    h2 {
+        background-color: rgb(78, 13, 6);
+        color: #eee;
 
+    }
+    
+    p {
+        margin: 0;
+       
+    }
 
+    .data__info__column__content__title {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        
+    }
 
+    .weather__info {
+        grid-column: 4;
+        background-color: #eeeeee55;
+        justify-content: left;
+        place-items: start;
+    }
+
+    
 }    
 
 
