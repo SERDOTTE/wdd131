@@ -1,55 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Week03 - Rodrigo Serdotte Freitas</title>
-    <meta name="description" content="Rodrigo Serdotte Freitas's BYU-Idaho WDD 131 - Dynamic Web Fundamentals - curse home page - Assignment Week 03">
-    <meta name="author" content="Rodrigo Serdotte Freitas">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/place.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      WDD 131 - Dynamic Web Fundamentals - Week03 - Rodrigo Serdotte Freitas
+    </title>
+    <meta
+      name="description"
+      content="Rodrigo Serdotte Freitas's BYU-Idaho WDD 131 - Dynamic Web Fundamentals - curse home page - Assignment Week 03"
+    />
+    <meta name="author" content="Rodrigo Serdotte Freitas" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header__base">
-        <h1>Hawaii</h1>
+      <h1>Hawaii</h1>
     </header>
-    <main class="contend">
-        <picture class="landscape__image">
-            <source srcset="images/hero_large_image_w03.jpg" media="(min-width: 900px)">
-            <img src="images/hero_small_image_w03.jpg" alt="Hawaii small image">
-        </picture>
-        <div class="data__info__column">
-            <div class="data__info__column__contend">
-                <div class="data__info__column__contend__title">
-                    <h2 id="title__data">Data</h2>
-                </div>
-                <div class="data__info__column__contend__data">
-                    <P class="data__text"><strong>Area:</strong> 28.313 sq km </P>
-                    <P class="data__text"><strong>Population:</strong> 1,400,000</P>
-                    <P class="data__text"><strong>Capital:</strong> Honolulu</P>
-                    <P class="data__text"><strong>Languages:</strong> English and Havaiian</P>
-                    <P class="data__text"><strong>Currency:</strong> American Dollar</P>
-                    <p class="data__text"><strong>Time Zone:</strong> UTC-10</P>
-                    <p class="data__text"><strong>Calling Code:</strong> +1808</p>
-                    <p class="data__text"><strong>Internet TLD:</strong> .us</p>
-                </div>
+
+    <section class="hero">
+        <div class="container">
+          <div class="data-container-cards">
+            <!-- DATA CARD -->
+            <div class="data-card">
+              <div class="data-card-title-container">
+                <h2 class="data-card-title">Data</h2>
+              </div>
+
+              <div class="data-card-description">
+                <p><strong>Area:</strong> 28.313 sq km</p>
+                <p><strong>Population:</strong> 1,400,000</p>
+                <p><strong>Capital:</strong> Honolulu</p>
+                <p><strong>Languages:</strong> English and Havaiian</p>
+                <p><strong>Currency:</strong> American Dollar</p>
+                <p><strong>Time Zone:</strong> UTC-10</p>
+                <p><strong>Calling Code:</strong> +1808</p>
+                <p><strong>Internet TLD:</strong> .us</p>
+              </div>
             </div>
+          </div>
+
+          <!-- WHEATER CARD -->
+          <div class="weather-container-cards">
+            <div class="weather-card">
+              <div class="weather-card-title-container">
+                <h2 class="weather-card-title">
+                  Weather
+                  <i class="ph ph-cloud-sun"></i>
+                </h2>
+              </div>
+
+              <div class="weather-card-description">
+                <p><strong>Temperature:</strong> 10 °C</p>
+                <p><strong>Conditions:</strong> Party Cloudy</p>
+                <p><strong>Wind:</strong> 5 km/h</p>
+                <p><strong>Wind Chill:</strong> 9.8 °C</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="weather__info">
-            <h2>Weather</h2>
-            <img class="weather__icon" src="images/sunny_temperature_icon.svg" alt="temperature icon" width="500" height="250">
+      </section>
 
+      <section class="hero-mobile">
+        <div class="container">
+          <!-- DATA CARD -->
+          <div class="data-card-mobile">
+            <div class="data-card-title-container-mobile">
+              <h2 class="data-card-title-mobile">Data</h2>
+            </div>
+
+            <div class="data-card-description-mobile">
+              <p><strong>Area:</strong> 28.313 sq km</p>
+              <p><strong>Population:</strong> 1,400,000</p>
+              <p><strong>Capital:</strong> Honolulu</p>
+              <p><strong>Languages:</strong> English and Havaiian</p>
+              <p><strong>Currency:</strong> American Dollar</p>
+              <p><strong>Time Zone:</strong> UTC-10</p>
+              <p><strong>Calling Code:</strong> +1808</p>
+              <p><strong>Internet TLD:</strong> .us</p>
+            </div>
+          </div>
         </div>
 
-        
+        <!-- WHEATER CARD -->
+        <div class="weather-container-cards-mobile">
+          <div class="weather-card-mobile">
+            <div class="weather-card-title-container-mobile">
+              <i class="ph ph-cloud-sun cloud-sun"></i>
 
+              <h2 class="weather-card-title-mobile">Weather</h2>
+            </div>
+
+            <div class="weather-card-description-mobile">
+              <p><strong>Temperature:</strong> 10 °C</p>
+              <p><strong>Conditions:</strong> Party Cloudy</p>
+              <p><strong>Wind:</strong> 5 km/h</p>
+              <p><strong>Wind Chill:</strong> 9.8 °C</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
-        <p>&copy;<span id="copyrightYear"></span> 🎮 Rodrigo Serdotte Freitas 🎮 Brazil</p>
-        <p id="lastmod">Last Modification: <span id="lastModified"></span></p>
+      <p>
+        &copy;<span id="copyrightYear"></span> 🎮 Rodrigo Serdotte Freitas 🎮
+        Brazil
+      </p>
+      <p id="lastmod">Last Modification: <span id="lastModified"></span></p>
     </footer>
-</body>
+  </body>
 </html>

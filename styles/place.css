@@ -14,10 +14,161 @@
    
 }
 
-img {
-    max-width: 100%;
+body {
+    font-family: var(--font-family);
 }
 
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+/********************
+ HEADER 
+ ********************/
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 15px 0;
+    background-color: #283618;
+    border-bottom: 5px solid #fefae0c4;
+  }
+
+  .page-title {
+    color: #fefae0;
+    font-size: 40px;
+  }  
+
+/********************
+ HERO 
+ ********************/
+ .hero {
+    min-height: calc(100vh - 140px);
+  
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/hero_large_image_w03.jpg");
+  }
+  
+  .data-container-cards {
+    display: inline-block;
+    margin-top: 50px;
+  }  
+
+/********************
+DATA CARD 
+********************/
+.data-card {
+    padding: 20px;
+    background-color: #fefae0e7;
+    position: relative;
+  }
+  
+  .data-card-title-container {
+    position: absolute;
+    left: -10px;
+  
+    padding: 20px 200px 20px 20px;
+    background-color: #606c38;
+  }
+  
+  .data-card-title {
+    color: white;
+    font-weight: 700;
+  }
+  
+  .data-card-description {
+    padding: 100px 0 0 4px;
+  }
+
+  /********************
+ WEATHER CARD 
+ ********************/
+.weather-container-cards {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+  }
+  
+  .weather-card {
+    padding: 20px;
+    background-color: #fefae0e7;
+    position: relative;
+  }
+  
+  .weather-card-title-container {
+    position: absolute;
+    left: -10px;
+  
+    padding: 20px 70px 20px 20px;
+    background-color: #606c38;
+  }
+  
+  .weather-card-title {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .weather-card-description {
+    padding: 100px 0 0 4px;
+  }
+
+/********************
+ HERO MOBILE
+ *******************/
+ .hero-mobile {
+    display: none;
+    background-color: #fefae0;
+  }
+  
+  /********************
+   HERO MOBILE DATA
+   *******************/
+  .data-card-mobile {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .data-card-title-container-mobile {
+    margin-bottom: 20px;
+  }
+  
+  .data-card-title-mobile {
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: underline solid #606c38;
+  }
+
+/********************
+ HERO MOBILE WHEATER
+ *******************/
+.weather-container-cards-mobile {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.weather-card-title-container-mobile {
+  margin-bottom: 20px;
+}
+
+.cloud-sun {
+  font-size: 50px;
+  color: #283618;
+}
+
+.weather-card-title-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+
+  font-size: 32px;
+  font-weight: 600;
+  text-decoration: underline solid #606c38;
+}  
 
 #header__base {
 	background-color: var(--primary-color);
@@ -26,122 +177,34 @@ img {
 	text-align: center;
 	position: relative;
     align-content: center;
+    font-size: larger;
 
 }
 
-h1 {
-	text-align: center;
-	font-family: var(--font-family);
-	font-size: 4.0rem;
-	margin-left: 1rem;
-    background-color: var(--primary-color);
-	
-}
 
-h2 {
-    font-size: 3.2rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin: 1rem;
-    font-family: var(--font-family);
-}
-
-.landscape__image img {
-    width: 100vw;
-    height: auto;
-    object-fit: cover;
-    margin-top: 10px;
-        
-}
-
-p {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: var(--font-family);
-    text-align: var(--principal-text-align);
-    margin: 1rem;
-}
-
-p strong {
-    display: inline-block;
-    width: 40%; 
-    text-align: right; 
-    margin-right: 5px; 
-}
-
-.weather__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-@media (min-width: 900px) {
-    .contend {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: left;
-        align-items: center;
-        background-image: url('../images/hero_large_image_w03.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+@media (max-width: 410px) {
+    .page-title {
+      font-size: 30px;
     }
-
-    .landscape__image {
-        z-index: -1;
-        height: 1000px;         
+  }
+  
+  @media (max-width: 648px) {
+    .hero {
+      background-image: url("../images/hero_small_image_w03.jpg");
+      min-height: calc(100vh - 100px);
+      background-size: cover;
+      background-position: center;
     }
-
-    .data__info__column {
-        grid-column: 1;
-        background-color: #eeeeee55;
-        justify-content: left;
-        place-items: start;
-        margin-left: 20px;
-        padding: 10px;
-        position: absolute;
-        top: 300px;
-        width: 30%;
+  
+    .data-container-cards,
+    .weather-container-cards {
+      display: none;
     }
-
-    .data__info__column__content {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        margin: 0;
-        padding: 0;
-       
+  
+    .hero-mobile {
+      display: block;
     }
-
-    
-    h2 {
-        background-color: rgb(78, 13, 6);
-        color: #eee;
-
-    }
-    
-    p {
-        margin: 0;
-       
-    }
-
-    .data__info__column__content__title {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        
-    }
-
-    .weather__info {
-        grid-column: 4;
-        background-color: #eeeeee55;
-        justify-content: left;
-        place-items: start;
-    }
-
-    
-}    
-
+  }
 
 footer {
     text-align: center;
