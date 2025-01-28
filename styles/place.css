@@ -101,16 +101,25 @@ DATA CARD
   }
   
   .weather-card-title-container {
+    display: flex;
+    align-items: center;
     position: absolute;
     left: -10px;
-  
     padding: 20px 70px 20px 20px;
     background-color: #606c38;
+    width: 220px;
   }
   
   .weather-card-title {
+    display: flex;
+    align-items: center;
     color: white;
     font-weight: 600;
+  }
+
+  .weather-icon {
+    width: 50px;
+    height: 50px;
   }
   
   .weather-card-description {
@@ -155,9 +164,8 @@ DATA CARD
   margin-bottom: 20px;
 }
 
-.cloud-sun {
-  font-size: 50px;
-  color: #283618;
+.weather-icon {
+  width: 150px;
 }
 
 .weather-card-title-mobile {
