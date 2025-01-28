@@ -21,20 +21,63 @@
     <script src="scripts/place.js" defer></script>
   </head>
   <body>
-    <header id="header__base">
-      <h1>Hawaii</h1>
-    </header>
+    <main>
+      <header id="header__base">
+        <h1>Hawaii</h1>
+      </header>
 
-    <section class="hero">
-        <div class="container">
-          <div class="data-container-cards">
+      <section class="hero">
+          <div class="container">
+            <div class="data-container-cards">
+              <!-- DATA CARD -->
+              <div class="data-card">
+                <div class="data-card-title-container">
+                  <h2 class="data-card-title">Data</h2>
+                </div>
+
+                <div class="data-card-description">
+                  <p><strong>Area:</strong> 28.313 sq km</p>
+                  <p><strong>Population:</strong> 1,400,000</p>
+                  <p><strong>Capital:</strong> Honolulu</p>
+                  <p><strong>Languages:</strong> English and Havaiian</p>
+                  <p><strong>Currency:</strong> American Dollar</p>
+                  <p><strong>Time Zone:</strong> UTC-10</p>
+                  <p><strong>Calling Code:</strong> +1808</p>
+                  <p><strong>Internet TLD:</strong> .us</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WHEATER CARD -->
+            <div class="weather-container-cards">
+              <div class="weather-card">
+                <div class="weather-card-title-container">
+                  <h2 class="weather-card-title">
+                    Weather
+                    <img src="images/sunny_temperature_icon.svg" alt="Sunny Weather Icon" class="weather-icon" />
+                  </h2>
+                </div>
+
+                <div class="weather-card-description">
+                  <p><strong>Temperature:</strong> 10 °C</p>
+                  <p><strong>Conditions:</strong> Party Cloudy</p>
+                  <p><strong>Wind:</strong> 5 km/h</p>
+                  <p><strong>Wind Chill:</strong> 9.8 °C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-mobile">
+          <div class="container">
             <!-- DATA CARD -->
-            <div class="data-card">
-              <div class="data-card-title-container">
-                <h2 class="data-card-title">Data</h2>
+            <div class="data-card-mobile">
+              <div class="data-card-title-container-mobile">
+                <h2 class="data-card-title-mobile">Data</h2>
               </div>
 
-              <div class="data-card-description">
+              <div class="data-card-description-mobile">
                 <p><strong>Area:</strong> 28.313 sq km</p>
                 <p><strong>Population:</strong> 1,400,000</p>
                 <p><strong>Capital:</strong> Honolulu</p>
@@ -48,16 +91,14 @@
           </div>
 
           <!-- WHEATER CARD -->
-          <div class="weather-container-cards">
-            <div class="weather-card">
-              <div class="weather-card-title-container">
-                <h2 class="weather-card-title">
-                  Weather
-                  <img src="images/sunny_temperature_icon.svg" alt="Sunny Weather Icon" class="weather-icon" />
-                </h2>
+          <div class="weather-container-cards-mobile">
+            <div class="weather-card-mobile">
+              <div class="weather-card-title-container-mobile">
+                <h2 class="weather-card-title-mobile">Weather</h2>
+                <img src="images/sunny_temperature_icon.svg" alt="Sunny Weather Icon" class="weather-icon" />
               </div>
 
-              <div class="weather-card-description">
+              <div class="weather-card-description-mobile">
                 <p><strong>Temperature:</strong> 10 °C</p>
                 <p><strong>Conditions:</strong> Party Cloudy</p>
                 <p><strong>Wind:</strong> 5 km/h</p>
@@ -65,47 +106,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="hero-mobile">
-        <div class="container">
-          <!-- DATA CARD -->
-          <div class="data-card-mobile">
-            <div class="data-card-title-container-mobile">
-              <h2 class="data-card-title-mobile">Data</h2>
-            </div>
-
-            <div class="data-card-description-mobile">
-              <p><strong>Area:</strong> 28.313 sq km</p>
-              <p><strong>Population:</strong> 1,400,000</p>
-              <p><strong>Capital:</strong> Honolulu</p>
-              <p><strong>Languages:</strong> English and Havaiian</p>
-              <p><strong>Currency:</strong> American Dollar</p>
-              <p><strong>Time Zone:</strong> UTC-10</p>
-              <p><strong>Calling Code:</strong> +1808</p>
-              <p><strong>Internet TLD:</strong> .us</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- WHEATER CARD -->
-        <div class="weather-container-cards-mobile">
-          <div class="weather-card-mobile">
-            <div class="weather-card-title-container-mobile">
-              <h2 class="weather-card-title-mobile">Weather</h2>
-              <img src="images/sunny_temperature_icon.svg" alt="Sunny Weather Icon" class="weather-icon" />
-            </div>
-
-            <div class="weather-card-description-mobile">
-              <p><strong>Temperature:</strong> 10 °C</p>
-              <p><strong>Conditions:</strong> Party Cloudy</p>
-              <p><strong>Wind:</strong> 5 km/h</p>
-              <p><strong>Wind Chill:</strong> 9.8 °C</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <footer>
