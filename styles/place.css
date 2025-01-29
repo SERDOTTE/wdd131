@@ -198,7 +198,7 @@ DATA CARD
   
   @media (max-width: 648px) {
     .hero {
-      background-image: url("../images/hero_small_image_w03.webp.jpg");
+      background-image: url("../images/hero_small_image_w03.webp");
       min-height: calc(100vh - 100px);
       background-size: cover;
       background-position: center;
