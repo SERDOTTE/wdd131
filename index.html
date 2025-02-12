@@ -1,65 +1,98 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Rodrigo Serdotte Freitas</title>
-    <meta name="description" content="Rodrigo Serdotte Freitas's BYU-Idaho WDD 131 - Dynamic Web Fundamentals - curse home page">
-    <meta name="author" content="Rodrigo Serdotte Freitas">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
+<meta charset="utf-8">
+<meta name="description" content="Fill Me In">
+<meta name="author" content="Rodrigo Serdotte Freitas">
+
+<title>Product Review Form by Rodrigo Serdotte Freitas</title>
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- STYLE SHEETS -->
+<link href="css/normalize.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="css/small.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="css/medium.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="css/large.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>      
-        <h1>WDD 131 - Dynamic Web Fubdamentals -  <span class="highlight">Rodrigo S Freitas</span></h1>
-        <nav>
-            <a href="http://www.linkedin.com">Linkedin</a>
-            <a href="https://byupw.instructure.com/">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng">Scripture</a>
-            <a href="">Final Project</a>
-        </nav>
-        
+<!-- HEADER HERE -->
+	<header>
+        <h1>Product Review</h1>
     </header>
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <div class="about__me__intern">
-                <div class="about__me__text">
-                    <p class="apresentation">My name is Rodrigo and I am from Canoas, Brazil. I am a manager at a bank and professionally dedicated to the financial sector. However, my life goes beyond spreadsheets and reports. I am someone who prioritizes family time above all else. Outside of the corporate environment, I find great satisfaction in diving into the world of online gaming. The competition and strategy of these games protect me from moments of tension and challenge. Furthermore, I am a cinema and series enthusiast. Finding a good movie to watch or catching up on a captivating series is one of my favorite ways to relax and disconnect from work.</p>
-                    <h3>Rio Grande do Sul, Brazil</h3>
-                        <div class="flag__state">
-                            <figure>
-                                <img src="images/brazil_flag.png" alt="Brazil flag">
-                                <figcaption>Official Flag of Brazil</figcaption>
-                            </figure>
-                            <p class="flag__state__text">Rio Grande do Sul is the southernmost state in Brazil and the 9th largest state in t   he country. Known for its cultural diversity, it is a mix of European influences, especially German and Italian.</p>
-                        </div>
-                </div>
-                <div>
-                    <img class="about__me__image" src="images/profile.jpg" alt="Hello, my name is Rodrigo Serdotte Freitas" width="200">
-                </div>    
-            </div>    
-        </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
-            <div class="link-card">
-                <ul class="link-list">
-                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
-                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
-                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
-                <li><a href="https://placehold.co/" target="_blank">Image Placeholder</a></li>
-              </ul>
+            
+<!-- CONTENT HERE -->
+    <main class="main">
+        <form method="get" action="review.html" class="wf1">
+        
+            <label>Product Name
+                <select id="productSelect" name="subject">
+                    <option value="">Choose a Product... &#9662;</option>
+                </select>
+            </label>
+                
+            <label> Overall Rating</label>
+                <div class="rating">
+                    <label>
+                        <span class="star">⭐</span>
+                        <input type="radio" name="radio_rating" value="1" required>
+                    </label>
+                    <label>
+                        <span class="star">⭐⭐</span>
+                        <input type="radio" name="radio_rating" value="2" required>
+                    </label>
+                    <label>
+                        <span class="star">⭐⭐⭐</span>
+                        <input type="radio" name="radio_rating" value="3" required>
+                    </label>
+                    <label>
+                        <span class="star">⭐⭐⭐⭐</span>
+                        <input type="radio" name="radio_rating" value="4" required>
+                    </label>
+                    <label>
+                        <span class="star">⭐⭐⭐⭐⭐</span>
+                        <input type="radio" name="radio_rating" value="5" required>
+                    </label>
+                </div>                  
+                            
+            <label>Date of Installation 
+                <input type="date" name="completeDate" required>
+            </label>
+
+            <div class="features">
+                <label>Wich features did you find useful in the product? <br><em>(Check all that apply)</em></label>
+                <label><input type="checkbox" name="editing" value="yes"> Durability</label>
+                <label><input type="checkbox" name="code" value="yes"> Ease to Use</label>
+                <label><input type="checkbox" name="process" value="yes"> Performace</label>
+                <label><input type="checkbox" name="client" value="yes"> Design</label>
             </div>
-        </section>    
+
+            <label>Written Review (Optional)
+                <input type="text" name="fname">
+            </label>
+            
+            <label>Your Name (Optional)
+                <input type="text" name="fname">
+            </label>     
+
+            <input type="submit" value="Post Review">
+
+        </form>
+
     </main>
+    
+<!-- FOOTER HERE -->   
+  
     <footer>
         <p>&copy;<span id="copyrightYear"></span> 🎮 Rodrigo Serdotte Freitas 🎮 Brazil</p>
         <p id="lastmod">Last Modification: <span id="lastModified"></span></p>
     </footer>
+  
+<script src="js/scripts.js"></script>
 </body>
 </html>
