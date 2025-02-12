@@ -49,6 +49,7 @@ main {
     display: flex;
     gap: 20px; /* Espaço entre os elementos */
     justify-content: center;
+    max-width: 600px;
     
   }
   
