@@ -15,14 +15,20 @@ body {
     
 }
 
+/*----------- HEADER --------------*/
+header, main, footer {
+    width: 100%; 
+    max-width: 600px; 
+}
 
 /*----------- HEADER --------------*/
 header {
-    padding: .5rem 2%;
+    padding: 0 2%;
     background-color: #320778;
     color: #fff;
     text-align: center;
     padding: 15px;
+    width: 100%;   
 }
 header h1 {margin: 0;}
 
@@ -48,7 +54,7 @@ main {
 
 .rating {
     display: flex;
-    gap: 20px; /* Espaço entre os elementos */
+    gap: 20px; 
     justify-content: center;
     max-width: 600px;
     
@@ -63,15 +69,15 @@ text-align: center;
 }
 
 .star {
-    font-size: 20px; /* Tamanho da estrela */
+    font-size: 20px; 
     padding: 5px;
     display: inline-block;
     text-align: center;
-    min-width: 40px; /* Garante um tamanho mínimo */
+    min-width: 40px; 
   }
 
   .rating input {
-    margin-top: 5px; /* Espaço entre a estrela e o botão */ 
+    margin-top: 5px; 
   }  
 
 
@@ -144,6 +150,11 @@ text-align: center;
     border-bottom: solid 8px green;
 }
 
+.optional_text {
+    color: navy; 
+    font-weight: bold;
+}
+
 
 /*----------- FOOTER --------------*/
 footer {
@@ -152,3 +163,7 @@ footer {
     text-align: center;
     color: #fff;
 }
+
+#lastmod {
+    color: yellow;
+  }
