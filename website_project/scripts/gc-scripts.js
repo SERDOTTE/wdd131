@@ -213,11 +213,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-setTimeout(() => {
-    let imagesContainer = document.querySelector(".images");
-    if (imagesContainer) {
-        imagesContainer.innerHTML = " ";
-    } else {
-        console.error("Elemento .images não encontrado!");
-    }
-}, 1000); // Espera 1 segundo antes de tentar acessar
