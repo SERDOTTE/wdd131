@@ -1,0 +1,45 @@
+/* contact us page ***************************************/
+.body_contact_us {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    display: grid;
+    gap: 20px;
+    
+}
+
+.main_contact_us {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	padding: 20px;
+
+}
+.contact_us {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form {
+    flex: 1;
+    background-color: var(--accent1-color);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+}
+
+.side_image {
+    flex: 1;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imag_about {
+    height: auto;
+    border-radius: 8px;
+}
