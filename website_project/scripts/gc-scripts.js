@@ -105,14 +105,14 @@ const products = [
 
 createProductCard(products);
 
-const natalLink = document.querySelector("#natal");
-const xicaraLink = document.querySelector("#xicara");
+const christmasLink = document.querySelector("#christmas");
+const cupLink = document.querySelector("#cup");
 const baseLink = document.querySelector("#base");
-const maiorLink = document.querySelector("#maior_preco");
-const menorLink = document.querySelector("#menor_preco");
+const highest_priceLink = document.querySelector("#highest_price");
+const lowest_priceLink = document.querySelector("#lowest_price");
 const allLink = document.querySelector("#all");
 
-natalLink.addEventListener("click", () => {
+christmasLink.addEventListener("click", () => {
 	createProductCard(
 		products.filter(product => 
 			product.productName.toLowerCase().includes("christmas")
@@ -120,7 +120,7 @@ natalLink.addEventListener("click", () => {
 	);
 });
 
-xicaraLink.addEventListener("click", () => {
+cupLink.addEventListener("click", () => {
 	createProductCard(
 		products.filter(product => 
 			product.productName.toLowerCase().includes("cup")
@@ -136,13 +136,13 @@ baseLink.addEventListener("click", () => {
 	);
 });
 
-maiorLink.addEventListener("click", () => {
+highest_priceLink.addEventListener("click", () => {
 	createProductCard(
 		products.filter(product => product.price > 7)
 	);
 });
 
-menorLink.addEventListener("click", () => {
+lowest_priceLink.addEventListener("click", () => {
 	createProductCard(
 		products.filter(product => product.price < 7)
 	);
