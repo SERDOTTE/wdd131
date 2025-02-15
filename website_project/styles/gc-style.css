@@ -94,7 +94,7 @@ h2 {
  	position: absolute;
     top: 5px;
     right: 1rem;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: Verdana, sans-serif;
 	
 }
 
@@ -267,6 +267,8 @@ section {
 /* about us page ***************************************/
 .about_us, h1 {
 	display: grid;
+	font-family: Verdana, sans-serif;
+	margin-bottom: 50px;
 	}
 
 .about {
@@ -286,8 +288,8 @@ section {
 .p_about {
 	width: 60%;
 	text-align: justify;
-	font-family: var(--paragraph-font);
-	font-size: medium;
+	font-family: Verdana, sans-serif;
+	font-size: 1.5rem;
 }
 
 /* contact us page ***************************************/
