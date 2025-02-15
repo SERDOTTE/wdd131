@@ -155,7 +155,9 @@ allLink.addEventListener("click", () => {
 
 
 function createProductCard(filteredProducts) {
-	document.querySelector(".images").innerHTML = "";
+	
+	
+	document.querySelector(".images").innerHTML = " ";
 
 	filteredProducts.forEach(product => {
 		let card = document.createElement("section");
@@ -177,3 +179,45 @@ function createProductCard(filteredProducts) {
 		document.querySelector(".images").appendChild(card);
 	});
 } 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".wf1");
+
+    form.addEventListener("submit", function (event) {
+        
+        event.preventDefault();
+
+        
+        const purpose = document.querySelector("input[name='audience']:checked");
+        const purposeValue = purpose ? purpose.value : "undefined";
+
+       
+        let messageCount = localStorage.getItem("messageCount");
+        if (!messageCount) {
+            messageCount = 0;
+        } else {
+            messageCount = parseInt(messageCount, 10);
+        }
+
+       
+        messageCount++;
+        localStorage.setItem("messageCount", messageCount);
+
+        
+        let messagePurposes = JSON.parse(localStorage.getItem("messagePurposes")) || {};
+        messagePurposes[purposeValue] = (messagePurposes[purposeValue] || 0) + 1;
+        localStorage.setItem("messagePurposes", JSON.stringify(messagePurposes));
+
+        
+        form.submit();
+    });
+});
+
+setTimeout(() => {
+    let imagesContainer = document.querySelector(".images");
+    if (imagesContainer) {
+        imagesContainer.innerHTML = " ";
+    } else {
+        console.error("Elemento .images não encontrado!");
+    }
+}, 1000); // Espera 1 segundo antes de tentar acessar

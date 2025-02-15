@@ -374,6 +374,16 @@ label {
 	background-color: rgb(252, 79, 60)
 }
 
+/* thak you page ***************************************/
+.header_thanks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Verdana, sans-serif;
+	font-size: 2rem;
+	padding: 20px;
+}
+
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
 	h1 {
