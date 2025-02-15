@@ -27,20 +27,28 @@
     <main class="main_contact_us">
         <h1>Contact Us</h1>
             <form method="get" action="thanks.html" class="wf1">
-                <label>Your Name*:<input type="text" id="name" name="name" required></label>
-                <label>Your Email*:<input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
-                    
-                
-
-                    <div>Pourpose of the Message</div>
-                    <label><input type="radio" name="audience" value="beginner" id="beginner"> Question about a product</label>
-                    <label><input type="radio" name="audience" value="intermediate" id="intermediate"> Custom order</label>
-                    <label><input type="radio" name="audience" value="advanced" id="advanced"> Order Traching</label>
-                    
+                <div class="field_set">
+                    <label>Your Name*:<input type="text" id="name" name="name" required></label>
+                </div>
+                <div class="field_set">
+                    <label>Your Email*:<input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
+                </div>
+                <div class="field_set">
+                    <div class="div_wf1">
+                        Pourpose of the message:
+                    </div>    
+                        <label><input type="radio" name="audience" value="beginner" id="beginner"> Question about a product</label>
+                        <label><input type="radio" name="audience" value="intermediate" id="intermediate"> Custom order</label>
+                        <label><input type="radio" name="audience" value="advanced" id="advanced"> Order Traching</label>
+                </div>
+                <div class="field_set">
                     <label for="message">Your Message:</label>
                     <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="field_set">    
                     <label><input type="checkbox" name="editing" value="yes"> Please subscribe me to the monthly newsletter.</label>
-                    <button type="submit" value="Send Message">
+                </div>
+                    <button class="button" type="submit" value="Send Message">Send Message</button>
                 
                 
             </form>
