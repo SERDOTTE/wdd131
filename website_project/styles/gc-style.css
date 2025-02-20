@@ -1,342 +1,245 @@
 .varela-round-regular {
-	font-family: "Varela Round", serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-  
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 :root {
     --primary-color: #63161c;
-    --secondary-color:  #ce5d6b;
-	--accent1-color: #b92c50;
-    --accent2-color:  #fcd3e1;
+    --secondary-color: #ce5d6b;
+    --accent1-color: #b92c50;
+    --accent2-color: #fcd3e1;
 
-    --paragraph-font: "Varela Round", serif; 
-	--title-font: 'Montserrat', sans-serif, 700;
+    --paragraph-font: "Varela Round", serif;
+    --title-font: 'Montserrat', sans-serif, 700;
     --primary-font-size: 20px;
     --principal-text-align: justify;
     --background-color: #285f87;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-#header__menu {
-	display: flex;
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-	height: 5%;
-	text-align: center;
-	position: relative;
-	z-index: 10;
-	height: 5%;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main {
-	background-size: cover; /* ou contain, auto, etc. */
-	background-position: center; /* ou top, bottom, left, right, etc. */
-	/* Outros estilos para o main */
-	display: flex; /* opcional */
-	flex-direction: column; /* opcional */
-	min-height: 100vh; /* opcional */
-  }
-
-#container {
-	width: 100vw;
-	height: 100vh;
-	background: url('../images/croche_01.jpg');
-	background-size: cover;
-	
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1 {
-	text-align: center;
-	color: var(--primary-color);
-	font-family: Verdana, sans-serif; 
-	font-size: 1.6rem;
-	margin-left: 1rem;
-	position: relative;
-	z-index: 1;
-}
-
-h2 {
-		font-size: 1.2rem;
-		color: var(--primary-color);
-		text-align: left;
-		margin: 1rem;
-		font-family: var(--font-family);
-	}
-
-#nav {
-	max-width: 700px;
-	margin: 1rem auto;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	}
-
-.navigation {
-	list-style: none;
-	text-align: center;
-	padding: 0;
-    margin: 0;
-	
-	
+#header__menu {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 5%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative; 
+    z-index: 10; 
 }
 
 #menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: var(--secondary-color);
- 	position: absolute;
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--secondary-color);
+    position: absolute;
     top: 5px;
     right: 1rem;
-	font-family: Verdana, sans-serif;
-	
+    font-family: Verdana, sans-serif;
 }
 
 #menu::before {
-	content: "☰";
+    content: "☰";
 }
 
 #menu.open::before {
-	content: "❎";
+    content: "❎";
+}
+
+#nav {
+    max-width: 700px;
+    margin: 1rem auto;
+    font-family: Verdana, sans-serif;
 }
 
 .navigation {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	list-style: none;
-	font-family: Verdana, sans-serif;
-	background-color: var(--primary-color);
-	
-	
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: Verdana, sans-serif;
+    background-color: var(--primary-color);
+}
+
+
+.open {
+    opacity: 1;
 }
 
 .navigation a {
-	display: none;
-	padding: 1em;
-	text-align: center;
-	text-decoration: none;
-	color: #ffffff;
-
-	
-}
-
-.open {
-	opacity: 1; 
+    display: none;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    
 }
 
 .navigation a:hover {
-	background-color: var(--accent2-color);
-	color: var(--primary-color);
-	font-weight: 700;
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
-/* Product --------------*/
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-	position: relative;
-	top: 100%;
-	left: 0;
-	background-color: var(--primary-color);
-	z-index: 100;
-	display: none;
-	width: 100%;
-	padding: 10px 0;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-
-
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-	transition: background 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-	background-color: var(--accent2-color);
-	color: var(--primary-color);
-}
-
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-	display: block;
-	opacity: 1;
-    visibility: visible;
-}
-
-.main_products {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
-	padding: 20px;
-	background-color: rgb(244, 214, 219) ;
-}
-
-#menu.open + h1 {
-	display: none;
-}
-
-
-/* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
-	display: block;
+    display: block;
 }
 
-.fpart {
-    position: relative;
-    padding: 50px;
-    color: white;
-    min-height: 400px;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	
-}
-
-.fpart::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+#container {
     width: 100%;
     height: 100%;
+    background: url('../images/croche_01.jpg');
+    background-size: cover;
 }
 
-
-/* text box */
-.text {
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: Verdana, sans-serif;
+    font-size: 1.6rem;
+    margin: 1rem;
     position: relative;
+    z-index: 1;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.manual-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.manual-btn {
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.manual-btn:hover {
     background: var(--primary-color);
-    color: #ffffff;
-    padding: 20px;
-    width: 50%;
-    border-radius: 8px;
-    text-align: justify;
-    margin: 20px auto 0 50%;
-	font-family: Verdana, sans-serif;
-	font-size: 1.2rem;
-}
-
-.images {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 15px;
-	justify-content: center;	
-	align-items: center;
-	
-}
-
-.images img {
-	width: 100%;
-	height: auto;
-	padding: 10px;
-	border-radius: 8%;
-	
-
-
-}
-
-figcaption {
-	text-align: center;
-	font-size: 12px;
-	font-family: var(--paragraph-font);
-}
-
-section {
-	background-color: rgb(222, 229, 240);
-	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-	border-radius: 8%;
-	text-align: center;
-	font-family: var(--paragraph-font);
-	
-
 }
 
 /* about us page ***************************************/
 .about_us, h1 {
-	display: grid;
-	font-family: Verdana, sans-serif;
-	margin-bottom: 50px;
-	}
+    display: grid;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 50px;
+}
 
 .about {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .imag_about {
-	width: 30%;
-	height: auto;
-	padding: 10px;
-	border-radius: 8%;
-	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-	background-color: rgb(222, 229, 240);
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgb(222, 229, 240);
 }
 
 .p_about {
-	width: 60%;
-	text-align: justify;
-	font-family: Verdana, sans-serif;
-	font-size: 1.5rem;
+    width: 60%;
+    text-align: justify;
+    font-family: Verdana, sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
+/* about us page END ***************************************/
 
 /* contact us page ***************************************/
 .main_contact_us {
-	display: flex;
-	grid-template-columns: 1fr;
-	gap: 20px;
-	padding: 20px;
-	background-color: rgb(244, 214, 219) ;
+    display: flex;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(244, 214, 219);
+}
 
+#gurias_h1_contact_us {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .form {
-	flex: 1;
-	background-color: var(--accent1-color);
-	padding: 20px;
-	border-radius: 8px;
-	min-width: 300px;
+    flex: 1;
+    background-color: var(--accent1-color);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
 }
 
 .wf1 {
-	border: 1px solid #ddd;
-	display: grid;
-	padding: 1rem;
-	margin: 2rem 0;
-	border-radius: 8px;
+    border: 1px solid #ddd;
+    display: grid;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 8px;
 }
 
 .field_set {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 label {
-	display: block;
-	margin-bottom: 0.4rem;
-	font-family: Verdana, sans-serif;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: Verdana, sans-serif;
 }
 
 .wf1 input[type="text"],
 .wf1 input[type="email"],
 .wf1 select,
-.wf1 textarea
-{
+.wf1 textarea {
     background-color: #ffffff;
     display: block;
-    border: solid 1px #999; 
+    border: solid 1px #999;
     border-radius: 6px;
     padding: .75rem;
     color: #555;
@@ -348,112 +251,160 @@ label {
 .wf1 input[type="radio"],
 .wf1 input[type="checkbox"] {
     margin-right: 6px;
-        
 }
 
 .div_wf1 {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-family: Verdana, sans-serif;
-	margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 0.4rem;
 }
 
 .button {
-	background-color: var(--primary-color);
-	color: white;
-	width: 100%;
-	max-width: 600px;
-	padding: 10px 20px;
-	border-radius: 8px;
-	cursor: pointer;
-	font-family: Verdana, sans-serif;
-	font-size: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
 }
 
 .button:hover {
-	background-color: rgb(252, 79, 60)
+    background-color: rgb(252, 79, 60);
+}
+/* contact us page END ***************************************/
+
+/* thank you page ***************************************/
+.p_thanks {
+    font-size: 1.5rem;
+    margin-left: 10%;   
+}
+/* thank you page END ***************************************/
+
+
+/* product page ***************************************/
+.dropdown {
+    position: relative;
 }
 
-/* thak you page ***************************************/
-.header_thanks {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: Verdana, sans-serif;
-	font-size: 2rem;
-	padding: 20px;
+.dropdown-menu {
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 100; 
+    display: none;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* large view navigation ************************************/
-@media (min-width: 37.5em) {
-	h1 {
-		font-size: 2.0rem;
-		margin-left: 0;
-		text-align: center;
-		font-family: Verdana, sans-serif;
-	}
-	
-	h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
-
-	#menu {
-		display: none; /* hide hamburger button */
-	}
-
-	.navigation {
-		flex-direction: row;
-	}
-
-	.navigation a {
-		display: block;
-		flex: 1 1 100%;
-	}
-
-	.images {
-		grid-template-columns: 1fr 1fr;
-		width: 100%;
-		height: auto;
-
-		}
-
-	.dropdown {
-		position: relative;
-	}
-
-	.dropdown-menu {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background-color: var(--primary-color);
-		z-index: 100; /* Mantém o menu sobre os outros elementos */
-		display: none;
-		width: 200px; /* Define um tamanho fixo */
-		padding: 10px 0; /* Adiciona espaço interno */
-		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-	}	
-
-	.dropdown-menu-a{
-		display: block;
-	}
-
-	.dropdown:hover .dropdown-menu{
-		display: block;
-	}
-
-	
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
-@media (min-width: 80em) {
-	.images {
-		grid-template-columns: 1fr 1fr 1fr;
-		width: 100%;
-		height: auto;
-
-		}
+.dropdown-menu a:hover {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    
 }
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.main_products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(244, 214, 219);
+}
+
+#menu.open + h1 {
+    display: none;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+.fpart {
+    position: relative;
+    padding: 50px;
+    color: white;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fpart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* text box */
+.text {
+    position: relative;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    text-align: justify;
+    margin: 10px auto 0 10%;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8%;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--paragraph-font);
+}
+
+section {
+    background-color: rgb(222, 229, 240);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8%;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+
+/* product page END ***************************************/
 
 footer {
     justify-content: center;
@@ -463,12 +414,110 @@ footer {
     font-family: Verdana, sans-serif;
     font-size: 20px;
     padding: 5px;
+    
 }
 
 #lastmod {
     color: yellow;
-  }
+}
 
-  * {
+* {
     will-change: transform, opacity;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 600px) {
+    #header__menu {
+        justify-content: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        width: auto;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .text {
+        width: 50%;
+        margin: 1rem auto;
+    }
+
+    .slider {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .images {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: auto;
+    }
+
+    /* product page ***************************************/
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-color);
+        z-index: 1000; /* Define um z-index maior para garantir que o menu apareça sobre o main */
+        display: none;
+        width: 200px;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown-menu-a {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    /* product page END ***************************************/
+
+    /* about us page ***************************************/
+    .p_about {
+        font-size: 1.5rem;
+        padding: 100px;
+    }
+    /* about us page END ***************************************/
+
+    /* contact us page ***************************************/
+    #gurias_h1_contact_us {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        margin-top: 90px;
+    }
+    /* contact us page END ***************************************/
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .manual-btn {
+        padding: 10px;
+    }
 }
